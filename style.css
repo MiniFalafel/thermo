@@ -1,0 +1,95 @@
+:root {
+    --subtle: #101522;
+
+    --bg: #212733;
+    --fg: #fffae8;
+
+    --txtbg: #2f3745;
+    --txtfg: #fffae8;
+
+    --head2: #88cae8;
+    --head4: #e8a788;
+
+    --lborder: #e8faff33;
+
+    /*
+    --subtle: #5f5fa7;
+
+    --bg: #a7a7d7;
+    --fg: #212733;
+
+    --txtbg: #fffae8;
+    --txtfg: #2f3745;
+
+    --lborder: #0003;
+     */
+}
+
+/* LAYOUT */
+html, body {
+    height: 100%;
+}
+
+.hbox {
+    display: flex;
+    flex-flow: row;
+}
+
+.vbox {
+    display: flex;
+    flex-flow: column;
+}
+
+.expander {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.centered {
+    text-align: center;
+}
+
+.background {
+    z-index: -1;
+}
+
+.overlay {
+    z-index: 3;
+}
+
+
+/* STYLE */
+body {
+    background-color: var(--bg);
+    color: var(--fg);
+    font-size: 2em;
+    font-family: "Roboto", sans-serif;
+}
+
+.mod {
+    background-color: var(--txtbg);
+    color: var(--txtfg);
+    border-radius: 1vh;
+    margin: 1vh;
+    padding: 0.5em 1.5em;
+}
+
+.codeBox {
+    background-color: var(--bg);
+    margin: 0.5vh 0.5vh; padding: 0.3em 1.5em;
+    border: 0.2vh solid var(--lborder);
+    border-radius: 0.5vh;
+    font-family: monospace;
+}
+
+.subtle {
+    color: var(--subtle);
+}
+
+h2 {
+    color: var(--head2);
+}
+
+h4 {
+    color: var(--head4);
+}
