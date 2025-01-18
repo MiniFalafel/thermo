@@ -3,13 +3,25 @@ body {
     font-size: 1em;
 }
 
-/* DECORATION */
+/* DECORATION/ANIMATION */
 hr {
     background-color: var(--lborder);
     height: 0.1em;
     border: 0;
     border-top: 0.1em solid var(--lborder);
     
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .glass {
+        scale: 0.9; opacity: 0;
+        animation: fade-in ease forwards;
+        animation-timeline: view(80vh 0);
+    }
+
+    @keyframes fade-in {
+        to { scale: 1; opacity: 1; }
+    }
 }
 
 /* SIDE MENU */
