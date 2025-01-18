@@ -54,12 +54,12 @@ hr {
 }
 
 .handMenu img {
-    width: 2.7em;
+    width: 3.5em;
     filter: invert(100%);
 }
 
 .subMenu img {
-    width: 1.5em;
+    width: 1.7em;
 }
 
 #btnHandMenu    { right: 0; bottom: 0; }
