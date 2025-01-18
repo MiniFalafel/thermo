@@ -9,7 +9,17 @@ hr {
     height: 0.1em;
     border: 0;
     border-top: 0.1em solid var(--lborder);
-    
+    border-radius: 1em;
+}
+
+.linkbox {
+    transition: 0.3s;
+    cursor: pointer;
+    color: var(--hbig);
+}
+.linkbox:hover {
+    transition: 0.3s;
+    color: var(--hmed);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -41,11 +51,12 @@ hr {
 
 /* BACKGROUND */
 #divBgClip {
-    background-color: inherit;
-    /*image*/
+    background-color: var(--fg);
+    /* image (no image yet, but single color seems fine for now)
     background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F7f%2F23%2Fa0%2F7f23a01313cac8a605fec4344665b635.jpg&f=1&nofb=1&ipt=d7ce7e58b994e8438f353fdce8b32e7f5df44504a7bdb3ddddc2dc68c76263d6&ipo=images");
     background-repeat: no-repeat;
     background-size: 100vw auto;
+    */
 
     clip-path: polygon(0 32vh, 100% 25vh, 100% 0, 0 0);
     position: fixed;
@@ -90,4 +101,3 @@ hr {
 #hidHandMenuState:not(:checked) ~ .subMenu {
     transition: 0.3s;
 }
-

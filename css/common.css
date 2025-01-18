@@ -1,4 +1,5 @@
 :root {
+    /* These are now set in the script, so there's no real need to set them here. anymore
     --subtle: #101522;
 
     --bg: #212733;
@@ -12,23 +13,6 @@
 
     --lborder: #e8faff;
 
-    --icon-invert: 100%;
-
-    /*
-    --subtle: #596073;
-
-    --bg: #ebe2e0;
-    --fg: #fffae8;
-
-    --txtbg: #2f3745;
-    --txtfg: #fffae8;
-
-    --hbig: #88cae8;
-    --hmed: #e8a788;
-
-    --lborder: #2f3745;
-
-    --icon-invert: 30%;
      */
 }
 

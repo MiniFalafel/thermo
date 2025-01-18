@@ -44,15 +44,26 @@ function DarkLightMode(mode)
 
     if (mode)
     {   // dark colors
-        colors = {
-            "subtle":      "#101522",
-            "bg":          "#212733",
+         colors = {
+            "subtle":      "#15171e",
+            "bg":          "#2a2a2c",
             "fg":          "#fffae8",
-            "txtbg":       "#2f3745",
+            "txtbg":       "#3d3a38",
             "txtfg":       "#fffae8",
-            "hbig":        "#88cae8",
-            "hmed":        "#e8a788",
-            "jlborder":    "#e8faff",
+            "hbig":        "#d7c188",
+            "hmed":        "#92bdc4",
+            "lborder":     "#8e8579",
+            "icon-invert": "100%",
+        };
+         let _colors = {
+            "subtle":      "#15171e",
+            "bg":          "#25272d",
+            "fg":          "#fffae8",
+            "txtbg":       "#353941",
+            "txtfg":       "#fffae8",
+            "hbig":        "#9bc2d4",
+            "hmed":        "#997666",
+            "lborder":     "#e8faff",
             "icon-invert": "100%",
         };
     } else {
@@ -63,8 +74,8 @@ function DarkLightMode(mode)
             "fg":          "#fffae8",
             "txtbg":       "#2f3745",
             "txtfg":       "#fffae8",
-            "hbig":        "#88cae8",
-            "hmed":        "#e8a788",
+            "hbig":        "#d7c188",
+            "hmed":        "#92bdc4",
             "lborder":     "#2f3745",
             "icon-invert": "30%",
         };
