@@ -13,15 +13,19 @@
     --lborder: #e8faff33;
 
     /*
-    --subtle: #5f5fa7;
+    --subtle: #5d788e;;
 
-    --bg: #a7a7d7;
-    --fg: #212733;
+    --bg: #f0f3fa;
+    --fg: #f0f3fa;
 
-    --txtbg: #fffae8;
-    --txtfg: #2f3745;
 
-    --lborder: #0003;
+    --txtbg: #464d53;
+    --txtfg: #e9f3fa;
+
+    --hbig: #88cae8;
+    --hmed: #e8a788;
+
+    --lborder: #5d788e;
      */
 }
 
@@ -67,22 +71,48 @@ body {
 }
 
 .mod {
+    background-color: var(--txtbg);
+    border-radius: 1vh;
+    margin: 1vh;
+    padding: 0.5em 1.5em;
+}
+
+.shadow {
+    box-shadow: 0.1em 0.2em 0.5em color-mix(in srgb, var(--subtle) 60%, transparent);
+}
+
+/* Check for blurring support */
+@supports(backdrop-filter: blur(1em)) {
+    .mod {
     background-color: color-mix(in srgb, var(--txtbg) 60%, transparent);
-    backdrop-filter: blur(0.5em);
-    -webkit-backdrop-filter: blur(0.5em);
+    backdrop-filter: blur(0.7em);
+    }
+}
+
+@supports(-webkit-backdrop-filter: blur(1em)) {
+    .mod {
+    background-color: color-mix(in srgb, var(--txtbg) 60%, transparent);
+    -webkit-backdrop-filter: blur(0.7em);
+    }
+}
+
+/* "Plain" mod */
+.pmod {
+    background-color: var(--txtbg);
     box-shadow: 0.1em 0.2em 0.5em color-mix(in srgb, var(--subtle) 60%, transparent);
     border-radius: 1vh;
     margin: 1vh;
     padding: 0.5em 1.5em;
 }
-.txtmod {
+
+.txt {
     color: var(--txtfg);
 }
 
 .codeBox {
     background-color: var(--bg);
     margin: 0.5vh 0.5vh; padding: 0.3em 1.5em;
-    border: 0.2vh solid var(--lborder);
+    border: 0.2em solid var(--lborder);
     border-radius: 0.5vh;
     font-family: monospace;
 }
@@ -91,11 +121,11 @@ body {
     color: var(--subtle);
 }
 
-h1, h2 {
+h1, h2, h3 {
     color: var(--hbig);
 }
 
-h3, h4, h5 {
+h4, h5, h6 {
     color: var(--hmed);
 }
 

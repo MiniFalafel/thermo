@@ -1,3 +1,15 @@
+/* DECORATION */
+hr {
+    background-color: var(--subtle);
+    height: 0.1em;
+    border: 0;
+    border-top: 0.1em solid var(--subtle);
+    
+}
+
+.codeBox {
+    color: var(--txtfg);
+}
 
 /* SIDE MENU */
 @media (max-device-aspect-ratio: 4/3) {
@@ -17,7 +29,6 @@
     background-color: inherit;
     /*image*/
     background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F7f%2F23%2Fa0%2F7f23a01313cac8a605fec4344665b635.jpg&f=1&nofb=1&ipt=d7ce7e58b994e8438f353fdce8b32e7f5df44504a7bdb3ddddc2dc68c76263d6&ipo=images");
-    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 100vw auto;
 
@@ -32,25 +43,33 @@
 #divHandMenu {
     position: fixed;
     right: 1.5em; top: 90%;
-    filter: drop-shadow(0 0 3vh var(--subtle));
+    filter: drop-shadow(0 0 1em color-mix(in srgb, var(--subtle) 20%, #0003));
 }
 
 .handMenu {
     background-color: var(--bg);
     position: absolute;
-    width: 3.5vh;
-    padding: 2vh;
     clip-path: circle(50%);
+    padding: 0.7em;
+}
+
+.handMenu img {
+    width: 2.7em;
+    filter: invert(100%);
+}
+
+.subMenu img {
+    width: 1.5em;
 }
 
 #btnHandMenu    { right: 0; bottom: 0; }
-#btnHandInsta   { right: 12vh; bottom: 0; }
-#btnHandContact { right: 9.5vh; bottom: 9.5vh; }
-#btnHandReviews { right: 0; bottom: 12vh; }
+#btnHandInsta   { right: 5em; bottom: 0; }
+#btnHandContact { right: 3.9em; bottom: 3.9em; }
+#btnHandReviews { right: 0; bottom: 5em; }
 
 #hidHandMenuState:checked ~ .subMenu {
     transition: 0.3s;
-    right: 0.5vh; bottom: 0.5vh;
+    right: 0.5em; bottom: 0.5em;
 }
 #hidHandMenuState:not(:checked) ~ .subMenu {
     transition: 0.3s;
