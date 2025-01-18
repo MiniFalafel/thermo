@@ -5,58 +5,62 @@
     <script src="js/common.js"></script>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <div id="divBgClip" class="vbox background expander">
-    </div>
-    <div id="divMainContent" class="vbox">
+    <div id="divBgClip" class="vbox background expander"></div>
+    <div id="divPage"class="vbox">
         <span style="height: 10vh;"></span>
         <div id="divTopTitle" class="hbox">
             <span class="expander"></span>
-            <h1 class="centered">THERMO</h1>
+            <h1 class="centered normheader mod">THERMO</h1>
             <span class="expander"></span>
         </div>
-
-        <div class="hbox mod">
-            <p>Here's some cool text in a cool box that has lots of interesting information in it! :D</p>
-        </div>
-        <div class="hbox mod">
-            <p>Get mad! don't make lemonade! make life rue the day they decided to give CAVE JOHNSON lemons! I'll get my engineers to invent a comBUSTible lemon so I can burn your house down</p>
-        </div>
-        <div class="vbox mod">
-            So anyway, here's some other information
-            <ul>
-                <li>What am I watching right now?</li>
-                <li>You can also embed code like this:</li>
-                <div class="codeBox">
-                    $ echo so cool!
+        <h4 class="centered mod">Where hot meets cool and comes out perfect</h4>
+        <div id="divContent" class="hbox">
+            <div id="divSideContent" class="vbox">
+                <div id="divSideMenu" class="vbox mod expander"></div>
+            </div>
+            <div id="divMainContent" class="vbox">
+                <div class="hbox mod">
+                    <p>Get mad! don't make lemonade! make life rue the day they decided to give CAVE JOHNSON lemons! I'll get my engineers to invent a comBUSTible lemon so I can burn your house down</p>
                 </div>
-                <li>voila!</li>
-            </ul>
+                <div class="vbox mod">
+                    So anyway, here's some other information
+                    <ul>
+                        <li>What am I watching right now?</li>
+                        <li>You can also embed code like this:</li>
+                        <div class="codeBox">
+                            $ echo so cool!
+                        </div>
+                        <li>voila!</li>
+                    </ul>
+                </div>
+                <div class="hbox mod">
+                    Gotta write more stuff to check if the scrolling behavior is what I expect it to be.
+                    Client wants to include google reviews into their page somehow, so I'll have to research that in a minute.
+                </div>
+                <div class="hbox mod">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+                <!-- add a spacer at the bottom to create a litle more room for reading -->
+                <div style="height: 15vh;"></div>
+                <div id="divBottomInfo" class="hbox">
+                    <span class="expander"></span>
+                    <p class="centered subtle">© copyright 2025</p>
+                    <span class="expander"></span>
+                </div>
+            </div>
+            <div id="divHandMenu">
+                <input id="hidHandMenuState" type="checkbox" checked style="display: none;">
+                <!-- pop-out buttons (show when handMenu button is clicked) -->
+                <input onclick="alert('goto insta');" id="btnHandInsta" class="mod handMenu subMenu" type="image" src="icons/instagram.png">
+                <input onclick="alert('goto contact');" id="btnHandContact" class="mod handMenu subMenu" type="image" src="icons/contact.png">
+                <input onclick="ScrollTo('reviews');" id="btnHandReviews" class="mod handMenu subMenu" type="image" src="icons/review-star.png">
+                <!-- toggle menu button -->
+                <input onclick="ToggleMenu();" id="btnHandMenu" class="mod handMenu" type="image" src="icons/menu_100.png" style="width: 7vh;">
+            </div>
         </div>
-        <div class="hbox mod">
-            Gotta write more stuff to check if the scrolling behavior is what I expect it to be.
-            Client wants to include google reviews into their page somehow, so I'll have to research that in a minute.
-        </div>
-        <div class="hbox mod">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </div>
-        <!-- add a spacer at the bottom to create a litle more room for reading -->
-        <div style="height: 15vh;"></div>
-        <div id="divBottomInfo" class="hbox">
-            <span class="expander"></span>
-            <p class="centered subtle">© copyright 2025</p>
-            <span class="expander"></span>
-        </div>
-    </div>
-    <div id="divHandMenu">
-        <input id="hidHandMenuState" type="checkbox" checked style="display: none;">
-        <!-- pop-out buttons (show when handMenu button is clicked) -->
-        <input onclick="alert('goto insta');" id="btnHandInsta" class="mod handMenu subMenu" type="image" src="icons/instagram.png">
-        <input onclick="alert('goto contact');" id="btnHandContact" class="mod handMenu subMenu" type="image" src="icons/contact.png">
-        <input onclick="ScrollTo('reviews');" id="btnHandReviews" class="mod handMenu subMenu" type="image" src="icons/review-star.png">
-        <!-- toggle menu button -->
-        <input onclick="ToggleMenu();" id="btnHandMenu" class="mod handMenu" type="image" src="icons/menu_100.png" style="width: 7vh;">
     </div>
 </body>
 </html>

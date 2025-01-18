@@ -1,13 +1,28 @@
 
+/* SIDE MENU */
+@media (max-device-aspect-ratio: 4/3) {
+    #divSideContent {
+        display: none;
+    }
+}
+
+
+#divSideMenu {
+    min-width: 30vw;
+    height: auto;
+}
+
 /* BACKGROUND */
 #divBgClip {
     background-color: inherit;
+    /*image*/
     background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F7f%2F23%2Fa0%2F7f23a01313cac8a605fec4344665b635.jpg&f=1&nofb=1&ipt=d7ce7e58b994e8438f353fdce8b32e7f5df44504a7bdb3ddddc2dc68c76263d6&ipo=images");
-    background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: 0 -83vh;
+    background-repeat: no-repeat;
+    background-size: 100vw auto;
+
     clip-path: polygon(0 32vh, 100% 25vh, 100% 0, 0 0);
-    position: absolute;
+    position: fixed;
     top: 0; left: 0; right: 0;
     height: 100%;
 }

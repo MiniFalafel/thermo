@@ -7,8 +7,8 @@
     --txtbg: #2f3745;
     --txtfg: #fffae8;
 
-    --head2: #88cae8;
-    --head4: #e8a788;
+    --hbig: #88cae8;
+    --hmed: #e8a788;
 
     --lborder: #e8faff33;
 
@@ -62,16 +62,21 @@ html, body {
 body {
     background-color: var(--bg);
     color: var(--fg);
-    font-size: 2em;
+    /*font-size: 2em;*/
     font-family: "Roboto", sans-serif;
 }
 
 .mod {
-    background-color: var(--txtbg);
-    color: var(--txtfg);
+    background-color: color-mix(in srgb, var(--txtbg) 60%, transparent);
+    backdrop-filter: blur(0.5em);
+    -webkit-backdrop-filter: blur(0.5em);
+    box-shadow: 0.1em 0.2em 0.5em color-mix(in srgb, var(--subtle) 60%, transparent);
     border-radius: 1vh;
     margin: 1vh;
     padding: 0.5em 1.5em;
+}
+.txtmod {
+    color: var(--txtfg);
 }
 
 .codeBox {
@@ -86,10 +91,14 @@ body {
     color: var(--subtle);
 }
 
-h2 {
-    color: var(--head2);
+h1, h2 {
+    color: var(--hbig);
 }
 
-h4 {
-    color: var(--head4);
+h3, h4, h5 {
+    color: var(--hmed);
+}
+
+.normheader {
+    color: var(--fg);
 }
