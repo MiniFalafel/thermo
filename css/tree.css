@@ -59,12 +59,12 @@ label.treelabel:before {
   height: 1em;
   border: 0.1em solid var(--hmed);
   border-radius: 1em;
-  content: '+';
+  content: "+";
   text-align: center;
   line-height: .9em;
 }
 
-:checked ~ label.treelabel:before { content: '–'; }
+:checked ~ label.treelabel:before { content: "–"; }
 
 /* ————————————————————–
   Tree branches
