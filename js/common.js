@@ -47,13 +47,13 @@ function DarkLightMode(mode)
          colors = {
             "subtle":      "#15171e",
             "bg":          "#2a2a2c",
-            "fg":          "#fffae8",
+            "fg":          "#fffcfd",
             "txtbg":       "#3d3a38",
             "txtfg":       "#fffae8",
             "hbig":        "#d7c188",
             "hmed":        "#92bdc4",
             "lborder":     "#8e8579",
-            "icon-invert": "100%",
+            "icon-invert": "40%",
         };
          let _colors = {
             "subtle":      "#15171e",
@@ -70,13 +70,24 @@ function DarkLightMode(mode)
         // light colors
         colors = {
             "subtle":      "#596073",
-            "bg":          "#ebe2e0",
-            "fg":          "#fffae8",
+            "bg":          "#211d1d",
+            "fg":          "#ffffff",
             "txtbg":       "#2f3745",
             "txtfg":       "#fffae8",
-            "hbig":        "#d7c188",
+            "hbig":        "#e7d9b6",
             "hmed":        "#92bdc4",
-            "lborder":     "#2f3745",
+            "lborder":     "#7d7d7d",
+            "icon-invert": "30%",
+        };
+        let _colors = {
+            "subtle":      "#597173",
+            "bg":          "#211d1d",
+            "fg":          "#ffffff",
+            "txtbg":       "#304645",
+            "txtfg":       "#ffe8e5",
+            "hbig":        "#e7b8b6",
+            "hmed":        "#92c4a9",
+            "lborder":     "#7d7d7d",
             "icon-invert": "30%",
         };
     }
