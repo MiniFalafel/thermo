@@ -50,7 +50,7 @@ hr {
     background-color: var(--bg);
     position: absolute;
     clip-path: circle(50%);
-    padding: 0.7em;
+    padding: 1em;
 }
 
 .handMenu img {
@@ -63,9 +63,9 @@ hr {
 }
 
 #btnHandMenu    { right: 0; bottom: 0; }
-#btnHandInsta   { right: 5em; bottom: 0; }
-#btnHandContact { right: 3.9em; bottom: 3.9em; }
-#btnHandReviews { right: 0; bottom: 5em; }
+#btnHandInsta   { right: 5.5em; bottom: 0; }
+#btnHandContact { right: 4.5em; bottom: 4.5em; }
+#btnHandReviews { right: 0; bottom: 5.5em; }
 
 #hidHandMenuState:checked ~ .subMenu {
     transition: 0.3s;
