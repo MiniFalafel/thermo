@@ -2,9 +2,10 @@
 <html>
 <head>
     <title>thermo</title>
-    <script src="js/common.js"></script>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/common.js"></script>
+    <script src="js/script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -18,43 +19,78 @@
         </div>
         <div class="hbox">
             <span class="expander"></span>
-            <h3 class="centered txt mod" style"width: auto;">Where hot meets cool and comes out perfect &#128526;</h3>
+            <h3 class="centered mod glass" style"width: auto;">
+                We're cool <i>and</i> hot &#128526;
+            </h3>
             <span class="expander"></span>
         </div>
-        <hr style="width: 95%;">
+        <hr style="width: 95%; height: .2em;">
         <div id="divContent" class="hbox">
-            <div id="divSideContent" class="vbox">
-                <div id="divSideMenu" class="vbox txt mod expander"></div>
+            <div id="divSideContent" class="vbox sticky">
+                <div id="divSideMenu" class="vbox glass mod">
+                    <h4 class="normheader" style="margin: .15em;">Jump To</h4>
+                    <!-- side navigation for desktop users -->
+                    <link rel="stylesheet" href="css/tree.css">
+                    <ul class="tree">
+                        <li>
+                            <input id="inToContact" type="checkbox" checked="checked"/>
+                            <label class="treelabel" onclick="ScrollTo('contact')" for="inToContact">
+                                Contact
+                            </label>
+                            <ul>
+                                <li>
+                                    <input id="inOpInsta" type="checkbox" checked="checked"/>
+                                    <span class="treelabel" onclick="NewTab('instagram.com')" for="inOpInsta">
+                                        Instagram
+                                    </label>
+                                </li>
+                                <li>
+                                    <input id="inOpFacebook" type="checkbox" checked="checked/">
+                                    <span class="treelabel" onclick="NewTab('facebook.com')" for="inOpFacebook">
+                                        Facebook
+                                    </label>
+                                </li>
+                                <li>
+                                    <input id="inOpGoogleBusiness" type="checkbox" checked="checked"/>
+                                    <span class="treelabel" onclick="NewTab('maps.google.com')" for="inOpGoogleBusiness">
+                                        Google Business
+                                    </label>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <input id="inToOtherCoolSection" type="checkbox" checked="checked"/>
+                            <span class="treelabel" onclick="ScrollTo('coolsection')" for="inToOtherCoolSection">
+                                Other cool section
+                            </label>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div id="divMainContent" class="vbox">
-                <div class="hbox txt mod">
+                <div class="hbox glass mod">
                     <p>Get mad! don't make lemonade! make life rue the day they decided to give CAVE JOHNSON lemons! I'll get my engineers to invent a comBUSTible lemon so I can burn your house down</p>
                 </div>
-                <div class="vbox txt mod">
+                <div class="vbox glass mod">
                     So anyway, here's some other information
                     <ul>
                         <li>What am I watching right now?</li>
-                        <li>You can also embed code like this:</li>
+                        <li>You can('t) also embed code like this:</li>
                         <div class="codeBox">
                             $ echo so cool!
                         </div>
                         <li>voila!</li>
                     </ul>
                 </div>
-                <div class="hbox txt mod">
+                <div class="hbox glass mod">
                     Gotta write more stuff to check if the scrolling behavior is what I expect it to be.
                     Client wants to include google reviews into their page somehow, so I'll have to research that in a minute.
                 </div>
-                <div class="hbox txt mod">
+                <div class="hbox glass mod">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </div>
                 <!-- add a spacer at the bottom to create a litle more room for reading -->
                 <div style="height: 15vh;"></div>
-                <div id="divBottomInfo" class="hbox">
-                    <span class="expander"></span>
-                    <p class="centered subtle">&#169; copyright 2025</p>
-                    <span class="expander"></span>
-                </div>
             </div>
             <div id="divHandMenu">
                 <input id="hidHandMenuState" type="checkbox" checked style="display: none;">
@@ -65,6 +101,11 @@
                 <!-- toggle menu button -->
                 <span onclick="ToggleMenu();" id="btnHandMenu" class="pmod handMenu centered" type="image"><img src="icons/svg/menu.svg"></span>
             </div>
+        </div>
+        <div id="divBottomInfo" class="hbox">
+            <span class="expander"></span>
+            <p class="centered subtle">&#169; copyright 2025</p>
+            <span class="expander"></span>
         </div>
     </div>
 </body>

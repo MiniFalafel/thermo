@@ -10,22 +10,25 @@
     --hbig: #88cae8;
     --hmed: #e8a788;
 
-    --lborder: #e8faff33;
+    --lborder: #e8faff;
+
+    --icon-invert: 100%;
 
     /*
-    --subtle: #5d788e;;
+    --subtle: #596073;
 
-    --bg: #f0f3fa;
-    --fg: #f0f3fa;
+    --bg: #ebe2e0;
+    --fg: #fffae8;
 
-
-    --txtbg: #464d53;
-    --txtfg: #e9f3fa;
+    --txtbg: #2f3745;
+    --txtfg: #fffae8;
 
     --hbig: #88cae8;
     --hmed: #e8a788;
 
-    --lborder: #5d788e;
+    --lborder: #2f3745;
+
+    --icon-invert: 30%;
      */
 }
 
@@ -61,6 +64,16 @@ html, body {
     z-index: 3;
 }
 
+.scroll {
+    overflow: auto;
+}
+
+.sticky {
+    position: sticky;
+    align-self: flex-start;
+    top: 0;
+}
+
 
 /* STYLE */
 body {
@@ -70,6 +83,10 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+.shadow {
+    box-shadow: 0.1em 0.2em 0.5em color-mix(in srgb, var(--subtle) 60%, transparent);
+}
+
 .mod {
     background-color: var(--txtbg);
     border-radius: 0.7em;
@@ -77,23 +94,44 @@ body {
     padding: 0.5em 1.5em;
 }
 
-.shadow {
-    box-shadow: 0.1em 0.2em 0.5em color-mix(in srgb, var(--subtle) 60%, transparent);
-}
-
 /* Check for blurring support */
 @supports(backdrop-filter: blur(1em)) {
-    .mod {
-    background-color: color-mix(in srgb, var(--txtbg) 60%, transparent);
-    backdrop-filter: blur(0.7em);
+    .glass {
+        background-color: color-mix(in srgb, var(--txtbg) 60%, transparent);
+        backdrop-filter: blur(1em);
+        overflow: clip;
+        position: relative;
     }
+
 }
 
 @supports(-webkit-backdrop-filter: blur(1em)) {
-    .mod {
-    background-color: color-mix(in srgb, var(--txtbg) 60%, transparent);
-    -webkit-backdrop-filter: blur(0.7em);
+    .glass {
+        background-color: color-mix(in srgb, var(--txtbg) 60%, transparent);
+        -webkit-backdrop-filter: blur(1em);
     }
+}
+
+.glass:before {
+    content: "";
+    background-color: #fff3;
+    z-index: -1;
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 2em;
+    filter: blur(4em);
+    mix-blend-mode: multiply;
+}
+
+.glass:after {
+    content: "";
+    background-color: #0006;
+    z-index: -1;
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 100%; height: 2em;
+    filter: blur(4em);
+    mix-blend-mode: multiply;
 }
 
 /* "Plain" mod */
@@ -107,14 +145,6 @@ body {
 
 .txt {
     color: var(--txtfg);
-}
-
-.codeBox {
-    background-color: var(--bg);
-    margin: 0.5vh 0.5vh; padding: 0.3em 1.5em;
-    border: 0.2em solid var(--lborder);
-    border-radius: 0.5vh;
-    font-family: monospace;
 }
 
 .subtle {

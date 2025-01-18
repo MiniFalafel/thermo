@@ -1,18 +1,14 @@
 /* DECORATION */
 hr {
-    background-color: var(--subtle);
+    background-color: var(--lborder);
     height: 0.1em;
     border: 0;
-    border-top: 0.1em solid var(--subtle);
+    border-top: 0.1em solid var(--lborder);
     
 }
 
-.codeBox {
-    color: var(--txtfg);
-}
-
 /* SIDE MENU */
-@media (max-device-aspect-ratio: 4/3) {
+@media (max-device-aspect-ratio: 1/1) {
     #divSideContent {
         display: none;
     }
@@ -49,23 +45,24 @@ hr {
 .handMenu {
     background-color: var(--bg);
     position: absolute;
-    clip-path: circle(50%);
+    border-radius: 50%;
     padding: 1em;
+    width: 3.5em; height: 3.5em;
+}
+
+.subMenu {
+    width: 1.7em; height: 1.7em;
 }
 
 .handMenu img {
-    width: 3.5em;
-    filter: invert(100%);
-}
-
-.subMenu img {
-    width: 1.7em;
+    width: 100%;
+    filter: invert(var(--icon-invert));
 }
 
 #btnHandMenu    { right: 0; bottom: 0; }
-#btnHandInsta   { right: 5.5em; bottom: 0; }
+#btnHandInsta   { right: 5.8em; bottom: 0; }
 #btnHandContact { right: 4.5em; bottom: 4.5em; }
-#btnHandReviews { right: 0; bottom: 5.5em; }
+#btnHandReviews { right: 0; bottom: 5.8em; }
 
 #hidHandMenuState:checked ~ .subMenu {
     transition: 0.3s;
